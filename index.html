@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رحمانی‌شاپ — کیس‌استادی توسعهٔ فروشگاه اینترنتی</title>
+<meta name="description" content="طراحی و توسعهٔ قالب اختصاصی وردپرس/ووکامرس برای فروشگاه لوازم جانبی کامپیوتر؛ از صفر تا انتشار، بدون صفحه‌ساز.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181d; --ink2:#1e242b; --gold:#d4a72c; --gold-deep:#b8860b;
+  --paper:#f7f5f0; --cool:#f2f4f8; --line:#e5e1d8; --muted:#6b7280;
+  --success:#2f9e6e; --danger:#d64545; --info:#3a7bd5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;background:var(--cool);color:var(--ink);line-height:1.9;font-size:15px}
+img{max-width:100%;display:block}
+a{color:var(--gold-deep)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.topnav{position:sticky;top:0;z-index:50;background:rgba(20,24,29,.96);backdrop-filter:blur(6px);border-bottom:2px solid var(--gold)}
+.topnav .wrap{display:flex;gap:22px;align-items:center;padding:12px 20px;flex-wrap:wrap}
+.topnav b{color:#fff;font-size:15px}
+.topnav b em{color:var(--gold);font-style:normal}
+.topnav a{color:#cfd4da;font-size:13px;text-decoration:none}
+.topnav a:hover{color:var(--gold)}
+header.hero{background:radial-gradient(circle at 85% -10%,rgba(212,167,44,.22),transparent 55%),linear-gradient(160deg,var(--ink),#0d1013);color:#fff;padding:76px 0 64px}
+.eyebrow{display:inline-block;border:1px solid rgba(212,167,44,.5);color:var(--gold);border-radius:30px;padding:6px 16px;font-size:12px;margin-bottom:18px}
+header.hero h1{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:900;margin-bottom:14px}
+header.hero p.lead{max-width:62ch;color:#c8cdd4;font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.chips span{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:6px 14px;font-size:12px;color:#e6e9ed}
+section{padding:56px 0}
+section h2{font-size:1.4rem;font-weight:900;border-right:5px solid var(--gold);padding-right:12px;margin-bottom:24px}
+section h2 small{display:block;font-size:12px;color:var(--muted);font-weight:400;border:0;margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(20,24,29,.1)}
+.card svg{width:30px;height:30px;fill:var(--gold-deep);margin-bottom:12px}
+.card h3{font-size:15px;font-weight:900;margin-bottom:8px}
+.card p{font-size:13px;color:#3d444d}
+.timeline{border-right:3px solid var(--gold);padding-right:26px;display:grid;gap:26px}
+.t-item{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.t-item::before{content:"";position:absolute;right:-33px;top:24px;width:13px;height:13px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(212,167,44,.25)}
+.t-item h3{font-size:14px;font-weight:900;color:var(--ink);margin-bottom:8px}
+.t-item .tag{display:inline-block;font-size:11px;border-radius:20px;padding:3px 12px;margin-left:8px}
+.tag.sym{background:rgba(214,69,69,.12);color:var(--danger)}
+.tag.cause{background:rgba(58,123,213,.12);color:var(--info)}
+.tag.fix{background:rgba(47,158,110,.12);color:var(--success)}
+.t-item p{font-size:13px;color:#3d444d;margin-top:6px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+figure{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+figure .frame{background:var(--ink);padding:10px;flex:1;display:flex;align-items:center;justify-content:center}
+figure img{max-width:100%;max-height:400px;object-fit:contain;border-radius:8px}
+figcaption{padding:12px 14px;font-size:12px;color:var(--muted);text-align:center}
+.download-btn{display:block;text-align:center;background:var(--ink);color:var(--gold);padding:12px;margin:0 14px 16px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s ease,transform .18s ease}
+.download-btn:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
+.download-btn::before{content:"⬇ "}
+.stack{display:flex;gap:8px;flex-wrap:wrap}
+.stack span{background:var(--ink);color:var(--gold);border-radius:10px;padding:8px 16px;font-size:12px;font-weight:700}
+footer.contact{background:var(--ink);color:#cfd4da;padding:44px 0;border-top:3px solid var(--gold)}
+footer.contact h2{color:#fff}
+footer.contact a{color:var(--gold)}
+footer.contact .row{display:flex;gap:26px;flex-wrap:wrap;font-size:14px}
+@media (max-width:900px){.grid,.shots{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid,.shots{grid-template-columns:1fr}}
+@media print{.topnav,footer.contact{display:none}body{background:#fff}section{padding:20px 0}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="wrap">
+    <b>رحمانی<em>‌شاپ</em> — کیس‌استادی</b>
+    <a href="#overview">نمای کلی</a>
+    <a href="#features">ویژگی‌ها</a>
+    <a href="#challenges">چالش‌ها</a>
+    <a href="#shots">تصاویر</a>
+    <a href="#contact">تماس</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">نمونه‌کار توسعهٔ فروشگاه اینترنتی — ۱۴۰۵</span>
+    <h1>رحمانی‌شاپ: فروشگاه لوازم جانبی کامپیوتر</h1>
+    <p class="lead">طراحی و توسعهٔ قالب اختصاصی وردپرس و ووکامرس از صفر تا انتشار؛ بدون صفحه‌ساز، بدون افزونهٔ تجاری، با معماری لایه‌ای CSS و تجربهٔ کاربری الهام‌گرفته از فروشگاه‌های بزرگ ایرانی — کاملاً راست‌چین و واکنش‌گرا.</p>
+    <div class="chips">
+      <span>WordPress 7.1 fa_IR</span><span>WooCommerce</span><span>PHP دستی</span><span>CSS/JS بدون فریم‌ورک</span><span>RTL کامل</span><span>نقش: طراح و توسعه‌دهندهٔ قالب</span>
+    </div>
+  </div>
+</header>
+
+<section id="overview">
+  <div class="wrap">
+    <h2>نمای کلی پروژه<small>هدف، دامنه و محدودیت‌ها</small></h2>
+    <div class="grid" style="grid-template-columns:1fr 1fr">
+      <div class="card">
+        <h3>هدف</h3>
+        <p>فروشگاهی محلی برای لوازم جانبی کامپیوتر با تجربهٔ کاربری هم‌ردهٔ فروشگاه‌های بزرگ: جستجوی زنده، فیلترهای چندبُعدی، منوی دسته‌ها، صفحهٔ محصول کامل و نسخهٔ موبایل مستقل — همه با کد اختصاصی داخل قالب.</p>
+      </div>
+      <div class="card">
+        <h3>دامنه و محدودیت‌ها</h3>
+        <p>قالب از سلسله‌مراتب قالب وردپرس ساخته شد: header، footer، front-page، قالب‌های ووکامرس، سایدبار فیلتر و صفحات خطا. محدودیت سخت: بدون صفحه‌ساز و بدون افزونهٔ پولی؛ هر قابلیت یا با کد قالب یا با API خود ووکامرس پیاده شد.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="background:#fff">
+  <div class="wrap">
+    <h2>ویژگی‌های پیاده‌سازی‌شده<small>شش ستون اصلی محصول</small></h2>
+    <div class="grid">
+      <div class="card">
+        <svg viewBox="0 0 24 24"><path d="M12 2 2 7v10l10 5 10-5V7zm0 2.3L19.5 8 12 11.7 4.5 8zM4 9.6l7 3.5v6.3l-7-3.5zm9 9.8v-6.3l7-3.5v6.3z"/></svg>
+        <h3>قالب اختصاصی از صفر</h3>
+        <p>header با جستجوی سراسری و منوی کشویی دسکتاپ، front-page بخش‌بندی‌شده، فوتر چهارستونه و قالب‌های اختصاصی ووکامرس بر پایهٔ template hierarchy.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24"><path d="M3 5h18v3H3zm3 5h12v3H6zm4 5h4v3h-4z"/></svg>
+        <h3>فیلترهای سمت سرور</h3>
+        <p>فیلتر برند/ویژگی، قیمت، دسته و موجودی با query-var های استاندارد ووکامرس؛ چیپ‌های فیلتر فعال با حذف تکی و «پاک کردن همه» — بدون وابستگی به جاوااسکریپت.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 4.9 14.3l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+        <h3>جستجوی زندهٔ محصولات</h3>
+        <p>اندپوینت admin-ajax با wc_search_products و دراپ‌داون پیشنهاد شامل بندانگشتی، نام و قیمت؛ با گارد JSON تا پاسخ‌های غیرمنتظره هرگز رندر نشوند.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v14h10V4zm3 16h4v1h-4z"/></svg>
+        <h3>تجربهٔ موبایل مستقل</h3>
+        <p>کشوی همبرگری با زیرمنوی دسته‌ها، شیت فیلترها از پایین صفحه، گرید دوستونه و اهداف لمسی بزرگ — بدون کتابخانهٔ خارجی.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zm0 6h16v4H4zm0 6h16v4H4z"/></svg>
+        <h3>صفحات تجاری کامل</h3>
+        <p>محصول تکی با گالری چسبان، تب‌ها و محصولات مرتبط؛ سبد، تسویه‌حساب و تأیید سفارش با استایل معنایی؛ صفحهٔ ۴۰۴ اختصاصی با جستجو و دسته‌ها.</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 24 24"><path d="M7 4h10v2h3v14H4V6h3zm2 2h6V5H9zM6 8v10h12V8z"/></svg>
+        <h3>معماری CSS پایدار</h3>
+        <p>لایه‌های base / fixes / mobile / commerce / polish با enqueue نسخه‌دار برای شکستن کش؛ استراتژی «جایگزینی کامل فایل» به‌جای الحاق‌های شکننده.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="challenges">
+  <div class="wrap">
+    <h2>چالش‌ها و راه‌حل‌ها<small>چهار داستان واقعی از مسیر توسعه</small></h2>
+    <div class="timeline">
+      <div class="t-item">
+        <h3>منوی بی‌اثر در ویرایشگر فهرست</h3>
+        <span class="tag sym">نشانه:</span><span class="tag cause">علت:</span><span class="tag fix">راه‌حل:</span>
+        <p>تغییرات منو روی هدر اعمال نمی‌شد؛ هدر لینک‌های ثابت نشان می‌داد. علت، فعال‌بودن fallback_cb در wp_nav_menu بود که به‌جای منوی واقعی، لینک‌های سخت‌کد چاپ می‌کرد. با اختصاص فهرست واقعی به مکان primary، هدر کاملاً داده‌محور شد.</p>
+      </div>
+      <div class="t-item">
+        <h3>حالت «به‌زودی» و ربودن AJAX</h3>
+        <span class="tag sym">نشانه:</span><span class="tag cause">علت:</span><span class="tag fix">راه‌حل:</span>
+        <p>پیشنهاد جستجوی زنده به‌جای JSON، صفحهٔ کامل «اتفاقات بزرگی در راه است» را داخل دراپ‌داون می‌ریخت. حالت Coming Soon ووکامرس پاسخ admin-ajax را برای کاربر مهمان بازنویسی می‌کرد. فروشگاه روی Live قرار گرفت و لایهٔ catch به fetch اضافه شد.</p>
+      </div>
+      <div class="t-item">
+        <h3>آبشار CSS و فایل‌های شکسته</h3>
+        <span class="tag sym">نشانه:</span><span class="tag cause">علت:</span><span class="tag fix">راه‌حل:</span>
+        <p>قوانین جدید «اعمال نمی‌شدند»؛ یک آکولاد بستهٔ جامانده همهٔ قواعد بعد از خود را مرده می‌کرد و enqueue بدون نسخه، کش قدیمی می‌داد. با لایهٔ fixes مجزا، شماره‌نسخه‌دارکردن enqueue و استراتژی جایگزینی کامل فایل، پایداری بازگشت.</p>
+      </div>
+      <div class="t-item">
+        <h3>خطای max_allowed_packet در پیشخوان</h3>
+        <span class="tag sym">نشانه:</span><span class="tag cause">علت:</span><span class="tag fix">راه‌حل:</span>
+        <p>ردیابی خطای بزرگ در همهٔ صفحات مدیریت؛ افزونهٔ خبرنامه هنگام seed کردن قالب‌های حجیم به سقف packet دیتابیس XAMPP می‌خورد. افزونهٔ غیرضروری حذف شد (گزینهٔ جایگزین: افزایش max_allowed_packet در my.ini).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shots" style="background:#fff">
+  <div class="wrap">
+    <h2>تصاویر محصول<small>دسکتاپ و موبایل</small></h2>
+    <div class="shots">
+      <figure>
+        <div class="frame"><img src="shots/01-home-desktop.png" alt="صفحه اصلی دسکتاپ"></div>
+        <figcaption>صفحهٔ اصلی — هیرو، نوار اعتماد، محصولات پیشنهادی</figcaption>
+        <a href="shots/01-home-desktop.png" download class="download-btn">دانلود عکس با کیفیت اصلی</a>
+      </figure>
+      <figure>
+        <div class="frame"><img src="shots/02-shop-filters-desktop.png" alt="فروشگاه دسکتاپ"></div>
+        <figcaption>فروشگاه — سایدبار فیلتر و تب‌های مرتب‌سازی</figcaption>
+        <a href="shots/02-shop-filters-desktop.png" download class="download-btn">دانلود عکس با کیفیت اصلی</a>
+      </figure>
+      <figure>
+        <div class="frame"><img src="shots/03-product-single.png" alt="محصول تکی"></div>
+        <figcaption>محصول تکی — گالری چسبان و جمع‌بندی خرید</figcaption>
+        <a href="shots/03-product-single.png" download class="download-btn">دانلود عکس با کیفیت اصلی</a>
+      </figure>
+      <figure>
+        <div class="frame"><img src="shots/04-mobile-drawer.png" alt="منوی موبایل"></div>
+        <figcaption>موبایل — کشوی منو با زیرمنوی دسته‌ها</figcaption>
+        <a href="shots/04-mobile-drawer.png" download class="download-btn">دانلود عکس با کیفیت اصلی</a>
+      </figure>
+      <figure>
+        <div class="frame"><img src="shots/05-mobile-filters-sheet.png" alt="فیلتر موبایل"></div>
+        <figcaption>موبایل — شیت فیلترها از پایین صفحه</figcaption>
+        <a href="shots/05-mobile-filters-sheet.png" download class="download-btn">دانلود عکس با کیفیت اصلی</a>
+      </figure>
+      <figure>
+        <div class="frame"><img src="shots/06-footer.png" alt="فوتر"></div>
+        <figcaption>فوتر — چهار ستون و نشان‌های اعتماد</figcaption>
+        <a href="shots/06-footer.png" download class="download-btn">دانلود عکس با کیفیت اصلی</a>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>پشتهٔ فناوری</h2>
+    <div class="stack">
+      <span>PHP</span><span>WordPress Theme API</span><span>WooCommerce Hooks</span><span>CSS Grid / Flex</span><span>Vanilla JS</span><span>Fetch / admin-ajax</span><span>MySQL</span><span>XAMPP</span><span>Git-ready</span>
+    </div>
+  </div>
+</section>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>همکاری و تماس</h2>
+    <div class="row">
+      <span>ایمیل: <a href="mailto:info@rahmani-shop.ir">info@rahmani-shop.ir</a></span>
+      <span>تلفن: <a href="tel:09123456789" dir="ltr">0912 345 6789</a></span>
+      <span>کد قالب و مستندات فنی به‌درخواست ارائه می‌شود.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
